@@ -1,5 +1,9 @@
 # Animator
 
+To develop a animator using unity with C# prgram and move the animator.
+
+
+
 ## Aim:
 
 ## Algorithm:
@@ -21,6 +25,50 @@
 
 ## Program:
 
+```
+NAME:KATHIRVEL.A
+REG NO:212221230047
+```
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class idleToCrouch : MonoBehaviour
+{
+    public Animator animator;
+    public float InputX;
+    public float InputY;
+    // Start is called before the first frame update
+    void Start()
+    {
+        animator = this.gameObject.GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        InputY = Input.GetAxis("Vertical");
+        InputX = Input.GetAxis("Horizontal");
+        animator.SetFloat("InputY",InputY);
+        animator.SetFloat("InputX", InputX);
+    }
+}
+```
+
+
+
 ## Output:
+
+
+
+![image](https://github.com/KathirvelAIDS/Animator/assets/94911373/5840d7f2-c0e5-4db5-ad6e-04d82cd16592)
+
+
+
+
+
+
+
 
 ## Result:
